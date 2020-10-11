@@ -1,0 +1,23 @@
+@import '/src/assets/styles/partials/variables';
+
+:host {
+    display: flex;
+    height: 100%;
+    background-color: $white;
+}
+
+img {
+    height: 100vh;
+}
+
+.auth-image {
+    background-image: url(/assets/splash.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.login-form {
+    max-width: 500px;
+}

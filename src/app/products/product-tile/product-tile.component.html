@@ -1,0 +1,15 @@
+<img [class.grayscaled]="!product.active" class="w-100" [src]="product.image">
+<p *ngIf="product.promo" class="bg-warning px-3 text-white position-absolute">
+    {{ 'PRODUCTS.PRODUCT_TILE.promo' | translate }}
+</p>
+<div class="d-flex flex-column flex-grow-1 p-3">
+    <h4>{{ product.name }}</h4>
+    <p class="text-gray flex-grow-1">{{ product.description }}</p>
+    <tsh-rating-box class="mt-4" [rating]="product.rating"></tsh-rating-box>
+</div>
+<tsh-button 
+    [disabled]="!product.active"
+    (click)="openDetails()"
+    [type]="product.active ? 'primary': 'secondary'"
+    [label]=" 'PRODUCTS.PRODUCT_TILE.' + (product.active ? 'show_details' : 'disabled') | translate "
+    ></tsh-button>

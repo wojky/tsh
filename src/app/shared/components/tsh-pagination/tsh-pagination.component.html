@@ -1,0 +1,22 @@
+
+    <a 
+    class="mr-4"
+    [class.pointer]="currentPage !== 1" 
+    [class.text-gray]="currentPage === 1" 
+    (click)="handleSelectPage(1)">{{ 'PRODUCTS.PAGINATION.first_page' | translate }}</a>
+    <div class="d-flex">
+        <div  
+         *ngFor="let page of paginationPages; let index = index;">
+             <span *ngIf="index === 3" class="mx-1">...</span>
+             <a 
+                (click)="handleSelectPage(page)" 
+                class="p-2"
+                [class.pointer]="currentPage !== page"
+                [class.text-gray]="currentPage === page">{{ page }}</a>
+         </div>
+    </div>
+    <a 
+        class="ml-4"
+        [class.pointer]="currentPage !== pageCount"
+        [class.text-gray]="currentPage === pageCount" 
+        (click)="handleSelectPage(pageCount)">{{ 'PRODUCTS.PAGINATION.last_page' | translate }}</a>

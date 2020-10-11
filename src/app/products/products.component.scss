@@ -1,0 +1,21 @@
+@import '/src/assets/styles/partials/variables';
+
+:host {
+    max-width: 1440px;
+}
+
+.products__list--bg {
+    background-color: $bg-color;
+}
+
+.products__empty-info {
+    width: 500px;
+}
+
+@media screen and (min-width: 768px) {
+    tsh-product-tile {
+        max-width: 328px;
+      }
+}
+
+

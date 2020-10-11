@@ -1,0 +1,22 @@
+<div class="auth-image d-none d-md-block mr-5"></div>
+
+<div class="login-form container d-flex flex-column h-100 mt-5 ">
+  <div class="flex-grow-1">
+    <a class="text-decoration-none" routerLink="/"><h3>join.tsh.io</h3></a>
+  </div>
+  <div class="flex-grow-2">
+    <h2>{{ "AUTH.title" | translate }}</h2>
+    <form class="d-flex flex-column mt-3">
+      <label class="mb-4">
+        <span class="d-block mb-1">{{ "AUTH.username" | translate }}</span>
+        <tsh-input [placeholder]="'AUTH.username_placeholder' | translate"></tsh-input>
+      </label>
+      <label class="mb-5">
+        <span class="d-block mb-1">{{ "AUTH.password" | translate }}</span>
+        <tsh-input [placeholder]="'AUTH.password_placeholder' | translate"></tsh-input>
+      </label>
+      <tsh-button [label]="'AUTH.login' | translate" (handleClick)="login($event)" class="mb-2"></tsh-button>
+      <a><span class="text-gray">{{ "AUTH.forgot_password" | translate }}</span></a>
+    </form>
+  </div>
+</div>

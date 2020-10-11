@@ -1,0 +1,15 @@
+$tile-border-radius: 8px;
+
+img {
+    border-top-left-radius: $tile-border-radius;
+    border-top-right-radius: $tile-border-radius;
+
+    &.grayscaled {
+        filter: grayscale(1);
+    }
+}
+
+.position-absolute {
+    top: 10px;
+    left: 10px;
+}

@@ -1,0 +1,26 @@
+<header class="d-flex flex-wrap justify-content-between align-items-center px-4 pb-4">
+    <h3 class="m-0">join.tsh.io</h3>
+    <div class="order-md-1">
+        <tsh-button [label]="'PRODUCTS.HEADER.login' | translate " type="white" (handleClick)="goToLogin()"></tsh-button>
+    </div>
+    <div class="header__filters mt-4 mt-md-0 d-md-flex align-items-center">
+        <tsh-input 
+            [placeholder]="'PRODUCTS.HEADER.search' | translate"
+            [suffixIcon]="{name: 'search'}"
+            [value]="productsRequestParams.search"
+            (valueChange)="updateParams('search', $event)"
+            (enterKeyPress)="filterProducts()"
+            (iconClick)="filterProducts()"></tsh-input>
+        <div class="d-flex mt-4 mt-md-0 ml-md-4">
+            <tsh-checkbox 
+                [label]="'PRODUCTS.HEADER.active' | translate"
+                class="mr-4"
+                [checked]="productsRequestParams.active"
+                (checkChange)="updateParams('active', $event)"></tsh-checkbox>
+            <tsh-checkbox 
+            [label]="'PRODUCTS.HEADER.promo' | translate"
+                [checked]="productsRequestParams.promo"
+                (checkChange)="updateParams('promo', $event)"></tsh-checkbox>
+        </div>
+    </div>
+</header>

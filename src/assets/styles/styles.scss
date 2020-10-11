@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import "partials/_variables";
+@import "partials/boostrap-ovewrite";
+@import "partials/utility";
+@import 'bootstrap';
+
+html, body { 
+  height: 100%;
+  margin: 0;
+  background-color: $bg-color;
+}
+
+body, a { 
+  font-family: Nunito, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: $text-primary;
+}
+
+ngb-modal-window {
+  background: rgba(0, 0, 0, 0.8);
+}
+

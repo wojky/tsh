@@ -1,0 +1,38 @@
+
+
+<div class="bg-white mx-auto pt-5">
+    <tsh-header class="d-block tsh-max-width mx-auto"></tsh-header>
+</div>
+<div class="products__list--bg pb-5">
+    <ng-container *ngIf="isSuccess; else loader">
+        <div *ngIf="products.length; else noProductInfo" class="d-flex flex-wrap justify-content-center justify-content-md-between px-4 tsh-max-width mx-auto">
+            <tsh-product-tile class="mt-4" [product]="product" *ngFor="let product of products"></tsh-product-tile>
+        </div>
+    </ng-container>
+</div>
+<div *ngIf="pageCount > productsRequestParams.limit" class="products__list--bg py-5">
+    <tsh-pagination 
+        [currentPage]="productsRequestParams.page" 
+        [pageCount]="pageCount" 
+        (selectPage)="goToPage($event)"></tsh-pagination>
+</div>
+
+<ng-template #loader>
+    <div class="d-flex justify-content-center mt-5">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+
+</ng-template>
+
+<ng-template #noProductInfo>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="products__empty-info bg-white my-5 py-5 d-flex flex-column justify-content-center align-items-center">
+            <div class="pt-5 pb-3">
+                <img src="/assets/no-products.png">
+            </div>
+            <h4>{{ 'PRODUCTS.LIST.EMPTY_SEARCH.heading' | translate }}</h4>
+            <p class="text-gray pb-5">{{ 'PRODUCTS.LIST.EMPTY_SEARCH.description' | translate }}</p>
+        </div>
+    </div>
+
+</ng-template>

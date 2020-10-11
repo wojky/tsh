@@ -1,0 +1,34 @@
+{
+  "AUTH": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "forgot_password": "Forgot password?",
+    "login": "Log in",
+    "username_placeholder": "Enter username",
+    "password_placeholder": "Enter password"
+  },
+  "PRODUCTS": {
+    "HEADER": {
+      "login":"Log in",
+      "search": "Search",
+      "active": "Active",
+      "promo": "Promo"
+    },
+    "LIST": {
+      "EMPTY_SEARCH": {
+        "heading": "Ooops… It’s empty here",
+        "description": "There are no products on the list"
+      }
+    },
+    "PRODUCT_TILE": {
+      "promo": "Promo",
+      "show_details": "Show details",
+      "disabled": "Unavailable"
+    },
+    "PAGINATION": {
+      "first_page": "First",
+      "last_page": "Last"
+    }
+  }
+}
